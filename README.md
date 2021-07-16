@@ -1,4 +1,4 @@
-# Basic Maths Intepreter
+# Basic Maths Interpreter
 
 Simple maths interpreter that uses BIDMAS
 
