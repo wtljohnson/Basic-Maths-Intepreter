@@ -400,6 +400,8 @@ class Number:
         if isinstance(other, Number):
             if other.value == 0:
                 return None, RTError(other.pos_start, other.pos_end, "Division by Zero", self.context)
+            if self.value % other.value == 0:
+                return Number(self.value // other.value).set_context(self.context), None
             return Number(self.value / other.value).set_context(self.context), None
 
     def powed_by(self, other):
